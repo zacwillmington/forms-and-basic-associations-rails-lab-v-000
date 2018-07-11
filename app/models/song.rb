@@ -22,13 +22,15 @@ class Song < ActiveRecord::Base
 
   def note_contents=(notes)
       binding.pry
-        note_array = [] 
+        note_array = []
         notes.each do |note|
-           note != "" || note != ''
+           if note != "" || note != ''
+               note_array << note
+           end
        end
        binding.pry
 
-        self.notes << Note.find_or_create_by(:content => note_array.split(", "))
+        self.notes << Note.find_or_create_by(:content => note_array)
   end
 
   def note_contents
