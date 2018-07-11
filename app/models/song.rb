@@ -27,7 +27,7 @@ class Song < ActiveRecord::Base
        end
        binding.pry
 
-        self.notes << Note.find_or_create_by(:content => note_array.split(", ")
+        self.notes << Note.find_or_create_by(:content => note_array.split(", "))
   end
 
   def note_contents
