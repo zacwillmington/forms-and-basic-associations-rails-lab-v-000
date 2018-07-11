@@ -31,7 +31,7 @@ class Song < ActiveRecord::Base
 
   def note_contents
 
-     self.notes.collect do |note|
+     self.notes.find_all do |note|
           note.content
       end.split(" ")
   end
