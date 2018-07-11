@@ -34,7 +34,6 @@ class Song < ActiveRecord::Base
      self.notes.collect do |note|
           note.content
       end.split(" ")
-      binding.pry
   end
 
 end
