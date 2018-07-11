@@ -22,7 +22,7 @@ class Song < ActiveRecord::Base
 
   def note_contents=(notes)
       binding.pry
-        note_array = notes.find do |note|
+        note_array = notes.find_all do |note|
            note != "" || note != ''
        end
        binding.pry
