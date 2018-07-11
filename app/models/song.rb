@@ -31,9 +31,9 @@ class Song < ActiveRecord::Base
 
   def note_contents
 
-      n = self.notes.collect do |note|
+     self.notes.collect do |note|
           note.content
-      end
+      end.split(" ")
       binding.pry
   end
 
