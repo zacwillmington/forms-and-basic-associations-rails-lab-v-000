@@ -29,9 +29,10 @@ class Song < ActiveRecord::Base
 
   def note_contents
       binding.pry
-      self.notes.collect do |note|
+      n = self.notes.collect do |note|
           note.content
       end
+      binding.pry
   end
 
 end
