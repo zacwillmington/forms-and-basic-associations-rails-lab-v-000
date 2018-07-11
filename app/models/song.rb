@@ -30,10 +30,11 @@ class Song < ActiveRecord::Base
   end
 
   def note_contents
-
-     self.notes.find_all do |note|
-          note.content
-      end.split(" ")
+      n = []
+     self.notes.each do |note|
+        n << note.content
+      end
+      n.split(" ")
   end
 
 end
