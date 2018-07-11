@@ -28,7 +28,7 @@ class Song < ActiveRecord::Base
            end
        end
        binding.pry
-        self.notes << Note.find_or_create_by(:content => note_array)
+        self.notes << Note.create(:content => note_array)
   end
 
   def note_contents
