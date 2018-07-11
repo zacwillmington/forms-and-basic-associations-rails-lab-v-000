@@ -34,7 +34,7 @@ class Song < ActiveRecord::Base
      self.notes.each do |note|
         n << note.content
       end
-      n.split(" ")
+      n
   end
 
 end
