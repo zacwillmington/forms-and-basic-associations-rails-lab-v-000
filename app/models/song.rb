@@ -25,6 +25,7 @@ class Song < ActiveRecord::Base
         note_array = notes.collect do |note|
            note != "" || note != ''
        end
+       binding.pry
 
         self.notes << Note.find_or_create_by(:content => note_array)
   end
